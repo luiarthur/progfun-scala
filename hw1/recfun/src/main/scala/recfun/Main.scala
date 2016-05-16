@@ -30,10 +30,22 @@ object Main {
   /**
    * Exercise 2
    */
-  def balance(chars: List[Char]): Boolean = ???
+   
+  def balance(chars: List[Char]): Boolean = {
+    def inner(x: String): Boolean = {
+      val y = x.replaceAll("\\(\\)","")
+      if (x == "") true else if (x==y) false else inner(y)
+    }
+    inner( chars.filter(s => s == '(' || s == ')').mkString )
+  }
 
   /**
    * Exercise 3
    */
-  def countChange(money: Int, coins: List[Int]): Int = ???
+  def countChange(money: Int, coins: List[Int]): Int =
+    if (money == 0) 1 else if (money < 0 || coins.isEmpty) 0
+    else countChange(money, coins.tail) + countChange(money - coins.head, coins)
+  /*
+    val x = List(1,2,3,4,5)
+   */
 }
