@@ -1,0 +1,3 @@
+# Download the first assignment "refunc" from the course website
+# wget http://spark-public.s3.amazonaws.com/progfun/assignments/recfun.zip
+recfun/

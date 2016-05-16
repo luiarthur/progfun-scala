@@ -1,2 +1,3 @@
 # Download the Example assignment and save to current directory
+# wget http://spark-public.s3.amazonaws.com/progfun/assignments/example.zip
 example/
